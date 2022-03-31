@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-	
-	<head>
-		<title>Lab 05</title>
-	</head>
-	
-	<body>
-		<table border = "1">
-		<tr>
-			<td id="header">Student ID</td>
-			<td id="header">Asmt 1</td>
-			<td id="header">Asmt 2</td>
-			<td id="header">Asmt 3</td>
-		</tr>
-		
-		<tr>
-			<td id="header">100000000</td>
-			<td id="cell">4.5</td>
-			<td id="cell">3.75</td>
-			<td id="cell">3.4</td>
-		</tr>
-		
-		<tr>
-			<td id="header">100000001</td>
-			<td id="cell">4.25</td>
-			<td id="cell">4.12</td>
-			<td id="cell">4.25</td>
-		</tr>
-		
-		<tr>			
-			<td id="header">100000002</td>
-			<td id="cell">5.0</td>
-			<td id="cell">4.75</td>
-			<td id="cell">4.5</td>
-		</tr>
-		
-	</body>
-	
+    <head>
+        <meta charset="UTF-8">
 
+        <link rel="stylesheet" href="styles/spreadsheet.css"/>
 
+        <script src="scripts/spreadsheet.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+        <table id="spreadsheet">
+            <colgroup>
+                <col id="StudentId" class="StudentId">
+                <col id="Asmt1" class="Asmt1">
+                <col id="Asmt2" class="Asmt2">
+                <col id="Asmt3" class="Asmt3">
+            </colgroup>
+
+            <tr id="Headers"> 
+                <td id="StudentId" class="StudentId" onclick="extractColumnData(StudentId)">Student ID</td>
+                <td id="Asmt1" class="Asmt1" onclick="extractColumnData(Asmt1)">Asmt 1</td>
+                <td id="Asmt2" class="Asmt2" onclick="extractColumnData(Asmt2)">Asmt 2</td>
+                <td id="Asmt3" class="Asmt3" onclick="extractColumnData(Asmt3)">Asmt 3</td>
+            </tr>
+
+            <tr id="100000000"> 
+                <td id="StudentId" class="StudentId" onclick="extractRowData(100000000)">100000000</td>
+                <td id="Asmt1" class="Asmt1" onclick="editCellData(100000000)">4.5</td>
+                <td id="Asmt2" class="Asmt2" onclick="editCellData(100000000)">3.75</td>
+                <td id="Asmt3" class="Asmt3" onclick="editCellData(100000000)">3.4</td>
+            </tr>
+
+            <tr id="100000001"> 
+                <td id="StudentId" class="StudentId" onclick="extractRowData(100000001)">100000001</td>
+                <td id="Asmt1" class="Asmt1" onclick="editCellData(100000001)">4.25</td>
+                <td id="Asmt2" class="Asmt2" onclick="editCellData(100000001)">4.12</td>
+                <td id="Asmt3" class="Asmt3" onclick="editCellData(100000001)">4.25</td>
+            </tr>
+
+            <tr id="100000002"> 
+                <td id="StudentId" class="StudentId" onclick="extractRowData(100000002)">100000002</td>
+                <td id="Asmt1" class="Asmt1" onclick="editCellData(100000002)">5.0</td>
+                <td id="Asmt2" class="Asmt2" onclick="editCellData(100000002)">4.75</td>
+                <td id="Asmt3" class="Asmt3" onclick="editCellData(100000002)">4.5</td>
+            </tr>
+        </table>
+
+    </body>
 </html>
